@@ -22,11 +22,11 @@ class UserModel {
   }
 
   set name(name: string) {
-    if (name.length > 2) 
+    if (name.length < 3) 
       throw new Error("The name must be longer than 3 characters.");
 
-    if (name.length < 31) 
-      throw new Error("The name must be lower than 31 characters.");
+    if (name.length > 30) 
+      throw new Error("The name must be lower than 30 characters.");
 
     this._name = name;
   }
