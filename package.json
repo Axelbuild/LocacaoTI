@@ -1,0 +1,39 @@
+{
+  "name": "locacaoti",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Axelbuild/LocacaoTI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Axelbuild/LocacaoTI/issues"
+  },
+  "homepage": "https://github.com/Axelbuild/LocacaoTI#readme",
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/node": "^25.5.2",
+    "@types/pg": "^8.20.0",
+    "prisma": "^7.6.0",
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.6.0",
+    "@prisma/client": "^7.6.0",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.0",
+    "fastify": "^5.8.4",
+    "fastify-plugin": "^5.1.0",
+    "pg": "^8.20.0",
+    "tsx": "^4.21.0"
+  }
+}
