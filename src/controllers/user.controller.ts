@@ -4,6 +4,11 @@ import { hash, compare } from "bcrypt";
 import { prisma } from "../database";
 import { UserModel } from "../models/user.model";
 
+interface IUserResponse {
+  id?: number;
+  name: string;
+  login: string;
+}
 
 export async function getUsersController(request: FastifyRequest, reply: FastifyReply) {
   return await prisma.users.findMany();
@@ -24,7 +29,7 @@ export async function createUserController(request: FastifyRequest, reply: Fasti
       }
     });
 
-    const response = {
+    const response: IUserResponse = {
       name: user.name,
       login: user.login
     };
@@ -51,7 +56,7 @@ export async function auth(request: FastifyRequest, reply: FastifyReply) {
     if (!await compare(password, user.password)) 
       return reply.status(404).send({ message: "login/password incorrect" });
 
-    const response: any = {
+    const response: IUserResponse = {
       id: user.id,
       name: user.name,
       login: user.login
